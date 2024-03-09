@@ -4,7 +4,7 @@
   "description": "Minimaxing Ouk Chatrang",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "browserify -p esmify src/main.js -o public/bundle.js && node server.js",
     "build": "browserify -p esmify src/main.js -o public/bundle.js",
     "watch-build": "watchify -p esmify src/main.js -o public/bundle.js"
   },
